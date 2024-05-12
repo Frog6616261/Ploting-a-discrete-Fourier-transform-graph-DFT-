@@ -5,7 +5,7 @@
 #include "DFT.h"
 #include "GraphPloter.h"
 
-#define PRINT_ALL_OBJECT_DATA false
+//#define PRINT_ALL_OBJECT_DATA 
 
 
 void SetFileNamePath(std::string& line, std::string readersFileName);
@@ -55,8 +55,8 @@ int main(int argc, char* argv[])
     GraphPloter Ploter{ Solver.GetArrayOfFrequencies(), Solver.GetArrayOfRealAmplitudes(),
     Solver.GetArrayOfImaginaryAmplitudes(), Solver.GetsizeOfTheArrays() };
 
-
-    while (!exit) {
+   
+    while (true) {
         std::this_thread::yield();
     }
 
